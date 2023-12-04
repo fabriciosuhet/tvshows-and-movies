@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SeriesEFilmes.Data;
 
@@ -10,9 +11,11 @@ using SeriesEFilmes.Data;
 namespace SeriesEFilmes.Migrations
 {
     [DbContext(typeof(SeriesEFilmesContext))]
-    partial class SeriesEFilmesContextModelSnapshot : ModelSnapshot
+    [Migration("20231204153735_Rating")]
+    partial class Rating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
